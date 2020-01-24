@@ -3,7 +3,7 @@ A Ruby on Rails implementation of a travel agent application
 
 ## Getting Started
 ### Project Setup
-Project configured as shown in the figure below. Project is backed by a postgresql database, so it can easily be hosted on Heroku. Frontend is done React in order to get more familiar with ReactJS.
+Project configured as shown in the figure below. Project is backed by a postgresql database, so it can easily be hosted on Heroku. Frontend is React in order to get more familiar with ReactJS.
 
 ![Project Config](documentation/RailsProjectConfiguration.png)
 
