@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: ece-517-project2_development
+  database: ece-485_development
   username: postgres
   password: 'password'
 
@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ece-517-project2_test
+  database: ece-485_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
