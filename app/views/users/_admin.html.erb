@@ -1,0 +1,16 @@
+<h2>All Users</h2>
+<%= render partial: 'shared/users_table', locals: { header: ['Email'],
+                                              options: [{title: 'Edit', url: "edit_user_path(m)"},
+                                                        {title: 'Delete', url: "user_path(m)", method: :delete, data: { confirm: 'Are you sure?'} }],
+                                              model: @users,
+                                              row: [:email]} %>
+
+<% if false %>
+<h2>All Items</h2>
+<%= render partial: 'shared/table', locals: { header: ['Name','Brand','Category','Quantity', 'Popularity'],
+                                              options: [{title: 'Show', url: "item_path(m)"},
+                                                        {title: 'Edit', url: "edit_item_path(m)"},
+                                                        {title: 'Delete', url: "item_path(m)", method: :delete, data: { confirm: 'Are you sure?'} }],
+                                              model: @items,
+                                              row: [:name, :brand, :category, :quantity, :purchases]} %>
+<% end %>

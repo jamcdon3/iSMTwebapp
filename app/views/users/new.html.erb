@@ -1,0 +1,6 @@
+<% if is_logged_in? && is_admin? %>
+  <h3 class="m-4">Create User</h3>
+<% else %>
+  <h3 class="m-4">Create your Account</h3>
+<% end %>
+<%= render partial: "form", locals: {url: users_path, method: :post, submitText: "Register"} %>

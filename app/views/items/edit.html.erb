@@ -1,0 +1,59 @@
+<h1>Edit Posts</h1>
+<%= form_for :item, url: item_path(@item), method: :patch do |f| %>
+
+<% if @item.errors.any? %>
+    <% @item.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+<% end %>
+
+<p>
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+</p>
+
+<p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+</p>
+
+<p>
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+</p>
+
+    <p>
+      <%= f.label :image %><br>
+      <%= f.file_field :image, accept: 'image/png, image/jpeg'%>
+    </p>
+
+<p>
+    <%= f.label :restricted %><br>
+    <%= f.select :restricted, [['Yes', 1], ['No', 0]] %>
+</p>
+
+<p>
+    <%= f.label :ageRestricted %><br>
+    <%= f.select :ageRestricted, [['Yes', 1], ['No', 0]] %>
+</p>
+
+<p>
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+</p>
+
+<p>
+    <%= f.label :cost %><br>
+    <%= f.text_field :cost %>
+</p>
+
+<p>
+    <%= f.label :taxSlab %><br>
+    <%= f.select :taxSlab, [['Tax slab 1', 1], ['Tax slab 2', 2], ['Tax slab 3', 3]] %>
+</p>
+
+<p>
+    <%= f.submit %>
+</p>
+
+<% end %>

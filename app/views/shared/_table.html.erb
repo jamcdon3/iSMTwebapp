@@ -1,0 +1,25 @@
+<table class="table table-striped table-bordered w-100" id="datatable">
+  <thead>
+    <tr>
+      <% header.each do |h| %>
+        <th><%= h %></th>
+      <% end %>
+      <% options.each do |o| %>
+        <th/>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% model.each do |m| %>
+      <tr>
+        <% row.each do |r| %>
+          <td><%= m[r] %></td>
+        <% end %>
+        <% options.each do |o| %>
+          <td><%= link_to o[:title], eval(o[:url]), method: o[:method], data: o[:data] %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

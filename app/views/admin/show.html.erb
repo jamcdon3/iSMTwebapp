@@ -1,0 +1,8 @@
+<h1>All Users</h1>
+
+<%= render partial: 'shared/table', locals: { header: ['Email'],
+                                              options: [{title: 'Show', url: "users_path(m)"},
+                                                        {title: 'Edit', url: "edit_user_path(m)"},
+                                                        {title: 'Destroy', url: "user_path(m)", method: :delete, data: { confirm: 'Are you sure?'} }],
+                                              model: @user,
+                                              row: [:email]} %>

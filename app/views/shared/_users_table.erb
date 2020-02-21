@@ -1,0 +1,29 @@
+<table class="table table-striped table-bordered w-100" id="datatable">
+  <thead>
+    <tr>
+      <% header.each do |h| %>
+        <th><%= h %></th>
+      <% end %>
+      <% options.each do |o| %>
+        <th/>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% User.all.each do |m| %>
+      <tr>
+        <% row.each do |r| %>
+          <td><%= m[r] %></td>
+        <% end %>
+        <% options.each do |o| %>
+          <td>
+          <% if !(m[:admin] and o[:title] == 'Delete') %>
+            <%= link_to o[:title], eval(o[:url]), method: o[:method], data: o[:data] %>
+          <% end %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

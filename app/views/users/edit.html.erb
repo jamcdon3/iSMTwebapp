@@ -1,0 +1,6 @@
+<% if is_admin? %>
+  <h3 class="m-4">Edit User Profile</h3>
+<% else %>
+  <h3 class="m-4">Edit your Profile</h3>
+<% end %>
+<%= render partial: "form", locals: {url: user_path(@user), method: :patch, submitText: "Update"} %>

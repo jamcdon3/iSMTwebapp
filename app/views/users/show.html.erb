@@ -1,0 +1,20 @@
+<h1>
+  Hello
+</h1>
+
+<% if false %>
+<h2>Items</h2>
+<%= render partial: 'shared/table', locals: { header: ['Name','Brand','Category','Quantity', 'Popularity'],
+                                              options: [{title: 'Cart', url: "cart_path(m)", method: :patch},
+                                                        {title: 'Wishlist', url: "wishlist_path(m)", method: :patch},
+                                                        {title: 'Buy Now', url: "item_path(m)"},
+                                                        {title: 'Show', url: "item_path(m)"},
+                                                        {title: 'Edit', url: "edit_item_path(m)"},
+                                                        {title: 'Destroy', url: "item_path(m)", method: :delete, data: { confirm: 'Are you sure?'} }],
+                                              model: @items,
+                                              row: [:name, :brand, :category, :quantity, :purchases]} %>
+<% end %>
+
+<% if logged_in? and current_user[:admin] %>
+  <%= render 'users/admin' %>
+<% end %>
