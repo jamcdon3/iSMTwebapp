@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+
+table { width: 500px; }
+.grow { width: 50%; }​

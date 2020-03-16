@@ -1,15 +1,284 @@
-<h2><%= @item.name %></h2>
-<p><strong>Brand:</strong> <%= @item.brand %></p>
-<p><strong>Category:</strong> <%= @item.category %></p>
-<p><%= image_tag(@item.image, :style => 'display: block; width: 40%;') %></p>
-<p><strong>Restricted:</strong> <%= @item.restricted %></p>
-<p><strong>Age Restricted:</strong> <%= @item.ageRestricted %></p>
-<p><strong>Quantity:</strong> <%= @item.quantity %></p>
-<p><strong>Cost:</strong> <%= @item.cost %></p>
-<p><strong>Tax slab:</strong> <%= @item.taxSlab %></p>
-<p><strong>Item ID:</strong> <%= @item.id %></p>
-<p><strong>Purchases:</strong> <%= @item.purchases %></p>
-<hr>
+<h2>Trial Run Data Entry: <%= @item.id %></h2>
+
+<table class="table table-striped table-bordered w-100">
+  <tr>
+    <th>Wet & Dry Bulb Temps</th>
+    <th></th>
+    <th>No.1</th>
+    <th>No.2</th>
+    <th>No.3</th>
+  </tr>
+  <tr>
+    <th rowspan="2">Tappi Room</th>
+    <td>Wet</td>
+    <td><%= @item.tappiWet1%></td>
+    <td><%= @item.tappiWet2%></td>
+    <td><%= @item.tappiWet3%></td>
+  </tr>
+  <tr>
+    <td>Dry</td>
+    <td><%= @item.tappiDry1%></td>
+    <td><%= @item.tappiDry2%></td>
+    <td><%= @item.tappiDry3%></td>
+  </tr>
+  <tr>
+    <th rowspan="2">Outside</th>
+    <td>Wet</td>
+    <td><%= @item.outsideWet1%></td>
+    <td><%= @item.outsideWet2%></td>
+    <td><%= @item.outsideWet3%></td>
+  </tr>
+  <tr>
+    <td>Dry</td>
+    <td><%= @item.outsideDry1%></td>
+    <td><%= @item.outsideDry2%></td>
+    <td><%= @item.outsideDry3%></td>
+  </tr>
+  <tr>
+    <th rowspan="2">Inside</th>
+    <td>Wet</td>
+    <td><%= @item.insideWet1%></td>
+    <td><%= @item.insideWet2%></td>
+    <td><%= @item.insideWet3%></td>
+  </tr>
+  <tr>
+    <td>Dry</td>
+    <td><%= @item.insideDry1%></td>
+    <td><%= @item.insideDry2%></td>
+    <td><%= @item.insideDry3%></td>
+  </tr>
+  <tr>
+    <th rowspan="2">Hood Exhaust</th>
+    <td>Wet</td>
+    <td><%= @item.hoodWet1%></td>
+    <td><%= @item.hoodWet2%></td>
+    <td><%= @item.hoodWet3%></td>
+  </tr>
+  <tr>
+    <td>Dry</td>
+    <td><%= @item.hoodDry1%></td>
+    <td><%= @item.hoodDry2%></td>
+    <td><%= @item.hoodDry3%></td>
+  </tr>
+</table>
+
+<table class="table table-striped table-bordered w-100">
+  <tr>
+    <th>After Dryer No.</th>
+    <th>Run</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Dry.</th>
+    <th>Pap.</th>
+  </tr>
+  <tr>
+    <th>Entering</th>
+    <td></td>
+    <td><%= @item.tempPap10%></td>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td><%= @item.tempDry11%></td>
+    <td><%= @item.tempPap11%></td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td><%= @item.tempDry12%></td>
+    <td><%= @item.tempPap12%></td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td><%= @item.tempDry13%></td>
+    <td><%= @item.tempPap13%></td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td><%= @item.tempDry14%></td>
+    <td><%= @item.tempPap14%></td>
+  </tr>
+  <tr>
+    <th>5</th>
+    <td><%= @item.tempDry15%></td>
+    <td><%= @item.tempPap15%></td>
+  </tr>
+  <tr>
+    <th>6</th>
+    <td><%= @item.tempDry16%></td>
+    <td><%= @item.tempPap16%></td>
+  </tr>
+  <tr>
+    <th>7</th>
+    <td><%= @item.tempDry17%></td>
+    <td><%= @item.tempPap17%></td>
+  </tr>
+  <tr>
+    <th>8</th>
+    <td><%= @item.tempDry18%></td>
+    <td><%= @item.tempPap18%></td>
+  </tr>
+  <tr>
+    <th>After Dryer No.</th>
+    <th>Run</th>
+    <th>1</th>
+  </tr>
+
+  <tr>
+    <th></th>
+    <th>Dry.</th>
+    <th>Pap.</th>
+  </tr>
+  <tr>
+    <th>Entering</th>
+    <td></td>
+    <td><%= @item.tempPap20%></td>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td><%= @item.tempDry21%></td>
+    <td><%= @item.tempPap21%></td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td><%= @item.tempDry22%></td>
+    <td><%= @item.tempPap22%></td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td><%= @item.tempDry23%></td>
+    <td><%= @item.tempPap23%></td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td><%= @item.tempDry24%></td>
+    <td><%= @item.tempPap24%></td>
+  </tr>
+  <tr>
+    <th>5</th>
+    <td><%= @item.tempDry25%></td>
+    <td><%= @item.tempPap25%></td>
+  </tr>
+  <tr>
+    <th>6</th>
+    <td><%= @item.tempDry26%></td>
+    <td><%= @item.tempPap26%></td>
+  </tr>
+  <tr>
+    <th>7</th>
+    <td><%= @item.tempDry27%></td>
+    <td><%= @item.tempPap27%></td>
+  </tr>
+  <tr>
+    <th>8</th>
+    <td><%= @item.tempDry28%></td>
+    <td><%= @item.tempPap28%></td>
+  </tr>
+  <tr>
+    <th>After Dryer No.</th>
+    <th>Run</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Dry.</th>
+    <th>Pap.</th>
+  </tr>
+  <tr>
+    <th>Entering</th>
+    <td></td>
+    <td><%= @item.tempPap230%></td>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td><%= @item.tempDry31%></td>
+    <td><%= @item.tempPap31%></td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td><%= @item.tempDry32%></td>
+    <td><%= @item.tempPap32%></td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td><%= @item.tempDry33%></td>
+    <td><%= @item.tempPap33%></td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td><%= @item.tempDry34%></td>
+    <td><%= @item.tempPap34%></td>
+  </tr>
+  <tr>
+    <th>5</th>
+    <td><%= @item.tempDry35%></td>
+    <td><%= @item.tempPap35%></td>
+  </tr>
+  <tr>
+    <th>6</th>
+    <td><%= @item.tempDry36%></td>
+    <td><%= @item.tempPap36%></td>
+  </tr>
+  <tr>
+    <th>7</th>
+    <td><%= @item.tempDry37%></td>
+    <td><%= @item.tempPap37%></td>
+  </tr>
+  <tr>
+    <th>8</th>
+    <td><%= @item.tempDry38%></td>
+    <td><%= @item.tempPap38%></td>
+  </tr>
+</table>
+
+<table class="table table-striped table-bordered w-100">
+  <tr>
+    <th>Consistency entering dryers</th>
+    <td> % </td>
+    <td><%= @item.enterConsist%></td>
+  <tr>
+  <tr>
+    <th>Moisture entering dryers</th>
+    <td> % </td>
+    <td><%= @item.enterMoist%></td>
+  <tr>
+  <tr>
+    <th>Moisture leaving dryers</th>
+    <td> % </td>
+    <td><%= @item.leaveMoist%></td>
+  <tr>
+  <tr>
+    <th>Machine speed</th>
+    <td> feet/min. </td>
+    <td><%= @item.speed%></td>
+  <tr>
+  <tr>
+    <th>Trim width at reel</th>
+    <td> inches </td>
+    <td><%= @item.trimWidth%></td>
+  <tr>
+  <tr>
+    <th>Basis weight (24x36-500) reem</th>
+    <td> lbs. </td>
+    <td><%= @item.basisWeight%></td>
+  <tr>
+  <tr>
+    <th>Steam pressure</th>
+    <td> psig </td>
+    <td><%= @item.steamPressure%></td>
+  <tr>
+  <tr>
+    <th>Steam requirement (3)</th>
+    <td> #/hr </td>
+    <td><%= @item.steamReq%></td>
+  <tr>
+  <tr>
+    <th>Measured Condensate</th>
+    <td> % </td>
+    <td><%= @item.measuredCond%></td>
+  <tr>
+</table>
+
 <%= link_to "Edit", edit_item_path(@item), :class => 'btn btn-sm btn-secondary', :type => 'button' %>
 <%= link_to "Delete", item_path(@item), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-sm btn-secondary', :type => 'button' %>
 <hr>

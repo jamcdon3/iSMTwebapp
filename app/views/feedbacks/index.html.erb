@@ -1,4 +1,6 @@
-<h1>Feedback Comments</h1>
+<h2>Feedback Comments</h2>
 <hr>
+<% if is_logged_in? and is_admin? %>
 <%= render 'feedbacks/feedbacks' %>
+  <% end %>
 <%= render 'feedbacks/form' %>
