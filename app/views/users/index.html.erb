@@ -1,12 +1,3 @@
 <h1>
   Hello Visitor
 </h1>
-
-<% if false %>
-<h2>Items</h2>
-<%= render partial: 'shared/table', locals: { header: ['Name','Brand','Category','Quantity'],
-                                              options: [{title: 'Show', url: "item_path(m)"},
-                                                        {title: 'Register to Buy Now', url: "new_user_path"}],
-                                              model: @items,
-                                              row: [:name, :brand, :category, :quantity]} %>
-<% end %>
