@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
   get 'logout', to: 'sessions#destroy'
   get 'cognos', to: 'welcome#cognos'
-  get 'cloud', to: 'welcome#cloud'
   get 'checkout', to: 'pages#checkout'
 
   get 'admin', to: 'admin#show'
