@@ -11,8 +11,7 @@ class SessionsController < ApplicationController
       session[:id] = @user.id
       redirect_to @user
     else
-      redirect_to login_path
-      flash.now[:alert] = "uploading_error"
+      redirect_to login_path, alert: "Incorrect username and password"
     end
   end
 

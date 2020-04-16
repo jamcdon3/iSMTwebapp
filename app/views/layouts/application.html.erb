@@ -42,6 +42,10 @@
     </form>
   </nav>
 
+  <% if flash[:alert] %>
+    <div class="alert alert-danger"> <%= flash[:alert] %> </div>
+  <% end %>
+
   <div class="container">
     <%= yield %>
   </div>
