@@ -9,6 +9,9 @@
 
 User.create([{ email: 'admin@ncsu.edu', password: 'password', admin: 1 }])
 User.create([{ email: 'user@ncsu.edu', password: 'password', admin: 0 }])
+Feedback.create([{ title: 'Validate Trial Run Calculations', body: 'Would like for the website to validate answers of Students calculations for trial runs.'}])
+Feedback.create([{ title: 'Cloud database access', body: 'Would like to be able to view and edit data that is automatically collected from sensors in data pipeline'}])
+Feedback.create([{ title: 'Superclass Trial Run Hierarchy', body: 'Would like to add trial run as the superclass, and subsequent subclasses such as Dryer Data.'}])
 Item.create([{ tappiWet1: 2, tappiDry1: 2, outsideWet1: 2, outsideDry1: 2, insideWet1: 2, insideDry1: 2,
                hoodWet1: 2, hoodDry1: 2, tappiWet2: 2, tappiDry2: 2, outsideWet2: 2, outsideDry2: 2, insideWet2: 2,
                insideDry2: 2, hoodWet2: 2, hoodDry2: 2, tappiWet3: 2, tappiDry3: 2, outsideWet3: 2, outsideDry3: 2,
