@@ -19,3 +19,6 @@ Project configured as shown in the figure below. Project is backed by a postgres
 ### Depoloyment on Heroku
 1.  Visit the Heroku website and create an account.
 2.  Create a new app, and under the deployment options, proceed with automatic connection to Github repository.  
+![Heroku](documentation/HerokuDeployment.PNG)
+
+Note: If automatic deployment with Github fails, feel free to follow up with Heroku CLI for additional debugging tools.  
