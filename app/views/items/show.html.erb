@@ -17,14 +17,14 @@
     <td><%= @item.tappiWet1%></td>
     <td><%= @item.tappiWet2%></td>
     <td><%= @item.tappiWet3%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tappiWet1 * @item.tappiWet2 * @item.tappiWet3)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tappiWet1 + @item.tappiWet2 + @item.tappiWet3)/3 %></td>
   </tr>
   <tr>
     <td>Dry</td>
     <td><%= @item.tappiDry1%></td>
     <td><%= @item.tappiDry2%></td>
     <td><%= @item.tappiDry3%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tappiDry1 * @item.tappiDry2 * @item.tappiDry3)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tappiDry1 + @item.tappiDry2 + @item.tappiDry3)/3 %></td>
   </tr>
   <tr>
     <th rowspan="2">Outside</th>
@@ -32,14 +32,14 @@
     <td><%= @item.outsideWet1%></td>
     <td><%= @item.outsideWet2%></td>
     <td><%= @item.outsideWet3%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.outsideWet1 * @item.outsideWet2 * @item.outsideWet3)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.outsideWet1 + @item.outsideWet2 + @item.outsideWet3)/3 %></td>
   </tr>
   <tr>
     <td>Dry</td>
     <td><%= @item.outsideDry1%></td>
     <td><%= @item.outsideDry2%></td>
     <td><%= @item.outsideDry3%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.outsideDry1 * @item.outsideDry2 * @item.outsideDry3)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.outsideDry1 + @item.outsideDry2 + @item.outsideDry3)/3 %></td>
   </tr>
   <tr>
     <th rowspan="2">Inside</th>
@@ -47,14 +47,14 @@
     <td><%= @item.insideWet1%></td>
     <td><%= @item.insideWet2%></td>
     <td><%= @item.insideWet3%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.insideWet1 * @item.insideWet2 * @item.insideWet3)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.insideWet1 + @item.insideWet2 + @item.insideWet3)/3 %></td>
   </tr>
   <tr>
     <td>Dry</td>
     <td><%= @item.insideDry1%></td>
     <td><%= @item.insideDry2%></td>
     <td><%= @item.insideDry3%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.insideDry1 * @item.insideDry2 * @item.insideDry3)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.insideDry1 + @item.insideDry2 + @item.insideDry3)/3 %></td>
   </tr>
   <tr>
     <th rowspan="2">Hood Exhaust</th>
@@ -62,14 +62,14 @@
     <td><%= @item.hoodWet1%></td>
     <td><%= @item.hoodWet2%></td>
     <td><%= @item.hoodWet3%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.hoodWet1 * @item.hoodWet2 * @item.hoodWet3)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.hoodWet1 + @item.hoodWet2 + @item.hoodWet3)/3 %></td>
   </tr>
   <tr>
     <td>Dry</td>
     <td><%= @item.hoodDry1%></td>
     <td><%= @item.hoodDry2%></td>
     <td><%= @item.hoodDry3%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.hoodDry1 * @item.hoodDry2 * @item.hoodDry3)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.hoodDry1 + @item.hoodDry2 + @item.hoodDry3)/3 %></td>
   </tr>
 </table>
 
@@ -106,7 +106,7 @@
     <td></td>
     <td><%= @item.tempPap230%></td>
     <td></td>
-    <td bgcolor="#B7E4AC"><%= avg_pap_enter = (@item.tempPap10 * @item.tempPap20 * @item.tempPap230)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= avg_pap_enter = (@item.tempPap10 + @item.tempPap20 + @item.tempPap230)/3 %></td>
   </tr>
   <tr>
     <th>1</th>
@@ -116,8 +116,8 @@
     <td><%= @item.tempPap21%></td>
     <td><%= @item.tempDry31%></td>
     <td><%= @item.tempPap31%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempDry11 * @item.tempDry21 * @item.tempDry31)/3 %></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempPap11 * @item.tempPap21 * @item.tempPap31)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempDry11 + @item.tempDry21 + @item.tempDry31)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempPap11 + @item.tempPap21 + @item.tempPap31)/3 %></td>
   </tr>
   <tr>
     <th>2</th>
@@ -127,8 +127,8 @@
     <td><%= @item.tempPap22%></td>
     <td><%= @item.tempDry32%></td>
     <td><%= @item.tempPap32%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempDry12 * @item.tempDry22 * @item.tempDry32)/3 %></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempPap12 * @item.tempPap22 * @item.tempPap32)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempDry12 + @item.tempDry22 + @item.tempDry32)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempPap12 + @item.tempPap22 + @item.tempPap32)/3 %></td>
   </tr>
   <tr>
     <th>3</th>
@@ -138,8 +138,8 @@
     <td><%= @item.tempPap23%></td>
     <td><%= @item.tempDry33%></td>
     <td><%= @item.tempPap33%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempDry13 * @item.tempDry23 * @item.tempDry33)/3 %></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempPap13 * @item.tempPap23 * @item.tempPap33)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempDry13 + @item.tempDry23 + @item.tempDry33)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempPap13 + @item.tempPap23 + @item.tempPap33)/3 %></td>
   </tr>
   <tr>
     <th>4</th>
@@ -149,8 +149,8 @@
     <td><%= @item.tempPap24%></td>
     <td><%= @item.tempDry34%></td>
     <td><%= @item.tempPap34%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempDry14 * @item.tempDry24 * @item.tempDry34)/3 %></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempPap14 * @item.tempPap24 * @item.tempPap34)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempDry14 + @item.tempDry24 + @item.tempDry34)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempPap14 + @item.tempPap24 + @item.tempPap34)/3 %></td>
   </tr>
   <tr>
     <th>5</th>
@@ -160,8 +160,8 @@
     <td><%= @item.tempPap25%></td>
     <td><%= @item.tempDry35%></td>
     <td><%= @item.tempPap35%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempDry15 * @item.tempDry25 * @item.tempDry35)/3 %></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempPap15 * @item.tempPap25 * @item.tempPap35)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempDry15 + @item.tempDry25 + @item.tempDry35)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempPap15 + @item.tempPap25 + @item.tempPap35)/3 %></td>
   </tr>
   <tr>
     <th>6</th>
@@ -171,8 +171,8 @@
     <td><%= @item.tempPap26%></td>
     <td><%= @item.tempDry36%></td>
     <td><%= @item.tempPap36%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempDry16 * @item.tempDry26 * @item.tempDry36)/3 %></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempPap16 * @item.tempPap26 * @item.tempPap36)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempDry16 + @item.tempDry26 + @item.tempDry36)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempPap16 + @item.tempPap26 + @item.tempPap36)/3 %></td>
   </tr>
   <tr>
     <th>7</th>
@@ -182,8 +182,8 @@
     <td><%= @item.tempPap27%></td>
     <td><%= @item.tempDry37%></td>
     <td><%= @item.tempPap37%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempDry17 * @item.tempDry27 * @item.tempDry37)/3 %></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempPap17 * @item.tempPap27 * @item.tempPap37)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempDry17 + @item.tempDry27 + @item.tempDry37)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempPap17 + @item.tempPap27 + @item.tempPap37)/3 %></td>
   </tr>
   <tr>
     <th>8</th>
@@ -193,8 +193,8 @@
     <td><%= @item.tempPap28%></td>
     <td><%= @item.tempDry38%></td>
     <td><%= @item.tempPap38%></td>
-    <td bgcolor="#B7E4AC"><%= (@item.tempDry18 * @item.tempDry28 * @item.tempDry38)/3 %></td>
-    <td bgcolor="#B7E4AC"><%= avg_pap_leave = (@item.tempPap18 * @item.tempPap28 * @item.tempPap38)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= (@item.tempDry18 + @item.tempDry28 + @item.tempDry38)/3 %></td>
+    <td bgcolor="#B7E4AC"><%= avg_pap_leave = (@item.tempPap18 + @item.tempPap28 + @item.tempPap38)/3 %></td>
   </tr>
 </table>
 
