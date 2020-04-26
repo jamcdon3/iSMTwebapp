@@ -15,3 +15,7 @@ Project configured as shown in the figure below. Project is backed by a postgres
 ![Run](documentation/RunTheProject.png)
 #### Problems:
 1. Hitting the stop button in the top bar does not actually kill the server on Windows 10. Must delete the file at `\tmp\pid\server.pid` if the server is stopped this way.
+
+### Depoloyment on Heroku
+1.  Visit the Heroku website and create an account.
+2.  Create a new app, and under the deployment options, proceed with automatic connection to Github repository.  
